@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    [SerializeField] GameObject ball;
+    [SerializeField] GameObject ball, cube;
     [SerializeField] Material blue, green,red;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,16 @@ public class Test : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnChangeToBlueButtonClick()
+    {
+        cube.GetComponent<MeshRenderer>().material = blue;
+    }
+
+    public void OnChangeToGreenButtonClick()
+    {
+        cube.GetComponent<MeshRenderer>().material = green;
     }
 
     public void OnGrabbleTouch()
