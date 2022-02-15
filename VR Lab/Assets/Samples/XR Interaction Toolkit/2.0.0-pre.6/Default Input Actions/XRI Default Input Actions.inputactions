@@ -214,6 +214,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SecondryButton",
+                    "type": "Button",
+                    "id": "24162e1a-0988-4b3a-910b-31f89179b480",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Primary2DAxisClick",
+                    "type": "Button",
+                    "id": "e7a60de0-1325-405c-ae4d-4cc53d599cd6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Primary2DAxisTouch",
+                    "type": "Button",
+                    "id": "7e1ec63a-7420-471b-bcd6-1729b561dae2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -590,6 +617,39 @@
                     "action": "PrimaryButton",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d8738a70-3cff-4f85-ba68-52ef2e988301",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed3f6743-ef47-4432-845f-379bbdb3cb3b",
+                    "path": "<XRController>{LeftHand}/thumbstickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary2DAxisClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "afe62487-3e9d-4778-bc51-70579ca4275a",
+                    "path": "<XRController>{LeftHand}/thumbstickTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary2DAxisTouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -754,6 +814,33 @@
                     "name": "PrimaryButton",
                     "type": "Button",
                     "id": "cc2c1e7f-b0e8-4aaf-afcf-741d60051eea",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SecondryButton",
+                    "type": "Button",
+                    "id": "be504470-92ec-4498-8578-ff3ec37068b8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Primary2DAxisClick",
+                    "type": "Button",
+                    "id": "a049f818-ada9-45d2-b08f-fb483f9a659f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Primary2DAxisTouch",
+                    "type": "Button",
+                    "id": "2abdb66c-ad4f-4af7-9975-612c93f2f012",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -1121,6 +1208,39 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "PrimaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4a72f3da-e09c-4006-bd83-46881e16988e",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "083ddcea-9eaa-4c8d-9daf-aee2db20409b",
+                    "path": "<XRController>{RightHand}/thumbstickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary2DAxisClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3d196938-322e-43b9-8a76-fc84c7050efa",
+                    "path": "<XRController>{RightHand}/thumbstickTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary2DAxisTouch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
