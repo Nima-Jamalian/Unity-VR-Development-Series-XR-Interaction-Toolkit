@@ -27,6 +27,8 @@ public class InputCapture : MonoBehaviour
     [SerializeField] InputActionReference right2DAxisTouch;
     [SerializeField] InputActionReference left2DAxisTouch;
 
+    [Header("Actions Component")]
+    [SerializeField] XRMovementManger xRMovementManger;
     private void Awake()
     {
         rightControllerActionGrip.action.performed += onRightGripPressed;
@@ -75,16 +77,19 @@ public class InputCapture : MonoBehaviour
     private void onRightControllerPrimaryButtonPressed(InputAction.CallbackContext obj)
     {
         Debug.Log("Right Primary Pressed (A).");
+        xRMovementManger.ActivateContinousMovement();
     }
 
     private void onLeftControllerPrimaryButtonPressed(InputAction.CallbackContext obj)
     {
         Debug.Log("Left Primary Pressed (X).");
+        xRMovementManger.ActivateWalkInPlaceMovement();
     }
 
     private void onRightControllerSecondaryButtonPressed(InputAction.CallbackContext obj)
     {
         Debug.Log("Right Secondary Pressed (B).");
+        xRMovementManger.ActivateLocomotionMovement();
     }
 
     private void onLeftControllerSecondaryButtonPressed(InputAction.CallbackContext obj)
