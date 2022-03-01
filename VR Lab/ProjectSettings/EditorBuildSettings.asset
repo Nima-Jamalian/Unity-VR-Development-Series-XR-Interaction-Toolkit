@@ -5,12 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Continuous Movement (Direct Interctor).unity
     guid: 5e4d86a591b8ecd4da0f64876d33df10
-  - enabled: 1
-    path: Assets/Scenes/Advance VR Rig Demo.unity
-    guid: 46b1a39da548dd94293d157b713db2e5
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a9853f55b0f538c47b7fdd5f60fff0d8, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d0e26901a3cbf964f88403b41e25429e, type: 2}

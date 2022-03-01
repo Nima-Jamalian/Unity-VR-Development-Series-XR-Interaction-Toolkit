@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    [SerializeField] GameObject ball, cube;
-    [SerializeField] Material blue, green,red;
+    [SerializeField] GameObject ball, cube, cup;
+    [SerializeField] Material blue, green,red,white;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,11 @@ public class Test : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ChnageCupColour(Material material)
+    {
+        cup.GetComponent<MeshRenderer>().material = material;
     }
 
     public void OnChangeToBlueButtonClick()

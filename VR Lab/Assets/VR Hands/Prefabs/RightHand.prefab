@@ -922,7 +922,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8249230696956201412}
   - component: {fileID: 2087626607}
-  - component: {fileID: 6903358378777154902}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -965,16 +964,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6903358378777154902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8732751464224707454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5040173a26eb09468888bc0985b941a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
