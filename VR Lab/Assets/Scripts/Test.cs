@@ -6,18 +6,6 @@ public class Test : MonoBehaviour
 {
     [SerializeField] GameObject ball, cube, cup;
     [SerializeField] Material blue, green,red,white;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log("My MINI VR Debugger!");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ChnageCupColour(Material material)
     {
         cup.GetComponent<MeshRenderer>().material = material;
