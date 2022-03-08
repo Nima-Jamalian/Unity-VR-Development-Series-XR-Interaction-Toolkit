@@ -30,6 +30,7 @@ public class InputCapture : MonoBehaviour
 
     [Header("Others")]
     [SerializeField] XRLocomotionManager xRLocomotionManager;
+    [SerializeField] XRInteractionManager xRInteractionManager;
 
     private void Awake()
     {
@@ -95,6 +96,7 @@ public class InputCapture : MonoBehaviour
         xRLocomotionManager.AcivateTeleportLocomotion();
     }
 
+<<<<<<< Updated upstream
     //private void onLeftControllerSecondaryButtonPressed(InputAction.CallbackContext obj)
     //{
     //    Debug.Log("Left Secondary Pressed (Y).");
@@ -129,5 +131,48 @@ public class InputCapture : MonoBehaviour
     //{
     //    Debug.Log("Left 2D Axis Touched (Joystick).");
     //}
+=======
+    private void onLeftControllerSecondaryButtonPressed(InputAction.CallbackContext obj)
+    {
+        //Debug.Log("Left Secondary Pressed (Y).");
+        if (xRInteractionManager.isRayInteractionIsActive == true)
+        {
+            xRInteractionManager.DisableRayCastInteraction();
+        } else
+        {
+            xRInteractionManager.ActivateRayCastInteraction();
+        }
+    }
+
+    private void onRightJoystickTurn(InputAction.CallbackContext obj)
+    {
+        Debug.Log(obj.ReadValue<Vector2>());
+    }
+    private void onLeftJoystickTurn(InputAction.CallbackContext obj)
+    {
+        Debug.Log(obj.ReadValue<Vector2>());
+    }
+
+    private void onRight2DAxisButtonPressed(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Right 2D Axis Pressed (Joystick).");
+    }
+
+    private void onLeft2DAxisButtonPressed(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Left 2D Axis Pressed (Joystick).");
+    }
+
+
+    private void onRight2DAxisTouchPressed(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Right 2D Axis Touched (Joystick).");
+    }
+
+    private void onLeft2DAxisTouchPressed(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Left 2D Axis Touched (Joystick).");
+    }
+>>>>>>> Stashed changes
 
 }

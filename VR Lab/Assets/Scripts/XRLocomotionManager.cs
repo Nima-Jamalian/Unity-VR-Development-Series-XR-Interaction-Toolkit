@@ -7,6 +7,7 @@ public class XRLocomotionManager : MonoBehaviour
     [SerializeField] GameObject teleportLocomotion, continousLocomotion, walkInLocomotion;
     [SerializeField] LayerMask uIlayerMask, defaultLayerMask;
     [SerializeField] XRRayInteractor leftControllerRay, rightConotrllerRay;
+    [SerializeField] XRInteractionManager xRInteractionManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class XRLocomotionManager : MonoBehaviour
         walkInLocomotion.SetActive(false);
         leftControllerRay.raycastMask = uIlayerMask;
         rightConotrllerRay.raycastMask = uIlayerMask;
+        xRInteractionManager.CheckToReActivateRauCastInteraction();
     }
     public void AcivateTeleportLocomotion()
     {
@@ -28,6 +30,8 @@ public class XRLocomotionManager : MonoBehaviour
         walkInLocomotion.SetActive(false);
         leftControllerRay.raycastMask = uIlayerMask + defaultLayerMask;
         rightConotrllerRay.raycastMask = uIlayerMask + defaultLayerMask;
+        xRInteractionManager.CheckToReActivateRauCastInteraction();
+
     }
     public void AcivateWalkInPlaceLocomotion()
     {
@@ -36,6 +40,9 @@ public class XRLocomotionManager : MonoBehaviour
         walkInLocomotion.SetActive(true);
         leftControllerRay.raycastMask = uIlayerMask;
         rightConotrllerRay.raycastMask = uIlayerMask;
+        xRInteractionManager.CheckToReActivateRauCastInteraction();
     }
+
+
 
 }

@@ -4,8 +4,33 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    [SerializeField] GameObject ball, cube, cup;
+    [SerializeField] GameObject ball, cube, cup,capsule;
     [SerializeField] Material blue, green,red,white;
+<<<<<<< Updated upstream
+=======
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log("My MINI VR Debugger!");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void CapsuleChangeColour(Material material)
+    {
+        capsule.GetComponent<MeshRenderer>().material = material;
+    }
+
+    public void MakeCapsuleSmall()
+    {
+        capsule.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+    }
+
+>>>>>>> Stashed changes
     public void ChnageCupColour(Material material)
     {
         cup.GetComponent<MeshRenderer>().material = material;
