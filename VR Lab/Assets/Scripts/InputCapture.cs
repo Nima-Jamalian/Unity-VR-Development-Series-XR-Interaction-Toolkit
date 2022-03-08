@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class InputCapture : MonoBehaviour
 {
-    [Header("My Actions")]
     [Header("Select Action")]
     [SerializeField] InputActionReference rightControllerActionGrip;
     [SerializeField] InputActionReference leftControllerActionGrip;
@@ -28,55 +27,54 @@ public class InputCapture : MonoBehaviour
     [SerializeField] InputActionReference right2DAxisTouch;
     [SerializeField] InputActionReference left2DAxisTouch;
 
-    [Header("Others")]
+    [Header("My Actions")]
     [SerializeField] XRLocomotionManager xRLocomotionManager;
     [SerializeField] XRInteractionManager xRInteractionManager;
 
     private void Awake()
     {
-        //Unused parts have been commented out
-        //rightControllerActionGrip.action.performed += onRightGripPressed;
-        //leftControllerActionGrip.action.performed += onLeftGripPressed;
+        rightControllerActionGrip.action.performed += onRightGripPressed;
+        leftControllerActionGrip.action.performed += onLeftGripPressed;
 
-        //rightControllerActionTrigger.action.performed += onRighTriggerPressed;
-        //leftControllerActionTrigger.action.performed += onLeftTriggerPressed;
+        rightControllerActionTrigger.action.performed += onRighTriggerPressed;
+        leftControllerActionTrigger.action.performed += onLeftTriggerPressed;
 
         rightPrimaryButtonAction.action.performed += onRightControllerPrimaryButtonPressed;
         leftPrimaryButtonAction.action.performed += onLeftControllerPrimaryButtonPressed;
 
         rightSecondaryButtonAction.action.performed += onRightControllerSecondaryButtonPressed;
-        //leftSecondaryButtonAction.action.performed += onLeftControllerSecondaryButtonPressed;
+        leftSecondaryButtonAction.action.performed += onLeftControllerSecondaryButtonPressed;
 
-        //rightTurnAction.action.performed += onRightJoystickTurn;
-        //leftTurnAction.action.performed += onLeftJoystickTurn;
+        rightTurnAction.action.performed += onRightJoystickTurn;
+        leftTurnAction.action.performed += onLeftJoystickTurn;
 
-        //right2DAxisButton.action.performed += onRight2DAxisButtonPressed;
-        //left2DAxisButton.action.performed += onLeft2DAxisButtonPressed;
+        right2DAxisButton.action.performed += onRight2DAxisButtonPressed;
+        left2DAxisButton.action.performed += onLeft2DAxisButtonPressed;
 
-        //right2DAxisTouch.action.performed += onRight2DAxisTouchPressed;
-        //left2DAxisTouch.action.performed += onLeft2DAxisTouchPressed;
+        right2DAxisTouch.action.performed += onRight2DAxisTouchPressed;
+        left2DAxisTouch.action.performed += onLeft2DAxisTouchPressed;
     }
 
-    //private void onRighTriggerPressed(InputAction.CallbackContext obj)
-    //{
-    //    Debug.Log("Right Trigger Pressed.");
-    //    //Debug.Log(obj.ReadValueAsButton());
-    //    //Debug.Log(obj.ReadValue<float>());
-    //}
-    //private void onLeftTriggerPressed(InputAction.CallbackContext obj)
-    //{
-    //    Debug.Log("Left Trigger Pressed.");
-    //}
+    private void onRighTriggerPressed(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Right Trigger Pressed.");
+        //Debug.Log(obj.ReadValueAsButton());
+        //Debug.Log(obj.ReadValue<float>());
+    }
+    private void onLeftTriggerPressed(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Left Trigger Pressed.");
+    }
 
-    //private void onRightGripPressed(InputAction.CallbackContext obj)
-    //{
-    //    Debug.Log("Right Grip Pressed.");
-    //}
+    private void onRightGripPressed(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Right Grip Pressed.");
+    }
 
-    //private void onLeftGripPressed(InputAction.CallbackContext obj)
-    //{
-    //    Debug.Log("Left Grip Pressed.");
-    //}
+    private void onLeftGripPressed(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Left Grip Pressed.");
+    }
 
     private void onRightControllerPrimaryButtonPressed(InputAction.CallbackContext obj)
     {
@@ -96,42 +94,6 @@ public class InputCapture : MonoBehaviour
         xRLocomotionManager.AcivateTeleportLocomotion();
     }
 
-<<<<<<< Updated upstream
-    //private void onLeftControllerSecondaryButtonPressed(InputAction.CallbackContext obj)
-    //{
-    //    Debug.Log("Left Secondary Pressed (Y).");
-    //}
-
-    //private void onRightJoystickTurn(InputAction.CallbackContext obj)
-    //{
-    //    Debug.Log(obj.ReadValue<Vector2>());
-    //}
-    //private void onLeftJoystickTurn(InputAction.CallbackContext obj)
-    //{
-    //    Debug.Log(obj.ReadValue<Vector2>());
-    //}
-
-    //private void onRight2DAxisButtonPressed(InputAction.CallbackContext obj)
-    //{
-    //    Debug.Log("Right 2D Axis Pressed (Joystick).");
-    //}
-
-    //private void onLeft2DAxisButtonPressed(InputAction.CallbackContext obj)
-    //{
-    //    Debug.Log("Left 2D Axis Pressed (Joystick).");
-    //}
-
-
-    //private void onRight2DAxisTouchPressed(InputAction.CallbackContext obj)
-    //{
-    //    Debug.Log("Right 2D Axis Touched (Joystick).");
-    //}
-
-    //private void onLeft2DAxisTouchPressed(InputAction.CallbackContext obj)
-    //{
-    //    Debug.Log("Left 2D Axis Touched (Joystick).");
-    //}
-=======
     private void onLeftControllerSecondaryButtonPressed(InputAction.CallbackContext obj)
     {
         //Debug.Log("Left Secondary Pressed (Y).");
@@ -173,6 +135,5 @@ public class InputCapture : MonoBehaviour
     {
         Debug.Log("Left 2D Axis Touched (Joystick).");
     }
->>>>>>> Stashed changes
 
 }

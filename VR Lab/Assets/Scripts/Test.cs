@@ -6,8 +6,6 @@ public class Test : MonoBehaviour
 {
     [SerializeField] GameObject ball, cube, cup,capsule;
     [SerializeField] Material blue, green,red,white;
-<<<<<<< Updated upstream
-=======
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +28,6 @@ public class Test : MonoBehaviour
         capsule.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
     }
 
->>>>>>> Stashed changes
     public void ChnageCupColour(Material material)
     {
         cup.GetComponent<MeshRenderer>().material = material;
